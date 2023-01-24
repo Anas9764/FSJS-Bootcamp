@@ -6,7 +6,7 @@
 
 ### Output
 
-![Project 1](./Project%201/output.png)
+![Project 1](./Project%201/output.jpg)
 
 - Create HTML and CSS again.
 
