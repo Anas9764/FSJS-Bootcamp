@@ -4,4 +4,4 @@
 
 ### Output
 
-![Project-1] (./)
+![Project-1] (https://github.com/Anas9764/FSJS-Bootcamp/blob/main/HTML%20and%20CSS/Week%2003/Project%2001/project1-output.jpg)
