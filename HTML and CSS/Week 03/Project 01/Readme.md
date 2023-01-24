@@ -4,4 +4,4 @@
 
 ### Output
 
-![Project-1](./project1-output.jpg)
+![Project-1] (./)
