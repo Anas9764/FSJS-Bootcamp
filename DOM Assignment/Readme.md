@@ -172,6 +172,7 @@ paragraphs.forEach((element) => {
   element.style.backgroundColor = "#eeeeff";
 });
 ```
+
 # **DOM Assignment-3**
 
 ## **Task 1**
@@ -199,5 +200,79 @@ Forms[1].addEventListener("submit", (event) => {
   EnterName.value = name.value;
   EnterEmail.value = email.value;
   EnterMessage.value = message.value;
+});
+```
+
+# **DOM Assignment-4**
+
+### **After Update**
+
+![Output Image](./04_DOM%20Project/Output/DOM%20P1%20SS.png)
+
+### **Project Solution**
+
+```js
+let bg = document.querySelectorAll(".clash-card__unit-stats");
+// console.log(bg)
+bg[0].style.backgroundColor = "#eea651";
+bg[1].style.backgroundColor = "#ce3f83";
+bg[2].style.backgroundColor = "#f6901a";
+bg[3].style.backgroundColor = "#82bb30";
+bg[4].style.backgroundColor = " #4facff";
+
+let title = document.querySelectorAll(".stat");
+title.forEach((e) => {
+  e.style.color = "white";
+});
+
+let rp = document.querySelectorAll(".stat-value");
+rp.forEach((e) => {
+  e.style.color = "white";
+});
+```
+
+
+# **DOM Assignment-5**
+
+### **After Update**
+![Output Image](./05_DOM%20Project/Output/DOM%20P2%20SS.png)
+
+### **Project Solution**
+
+```js
+<!-- button added in navbar -->
+
+let addbtn = document.querySelector(".nav-center")
+let lastdiv = addbtn.lastElementChild
+<!-- console.log(lastdiv) -->
+let newbtn = document.createElement("a")
+newbtn.classList.add("btn");
+newbtn.innerText=" Pro Subscription"
+<!-- console.log(newbtn) -->
+lastdiv.appendChild(newbtn)
+
+<!-- add one recipe on recipes section -->
+
+let recipe = document.querySelector(".tags-container div")
+let add = document.createElement("a")
+add.innerHTML= "chinese(7)";
+
+<!-- console.log(add) -->
+
+recipe.appendChild(add)
+
+<!-- card color text change -->
+
+let name = document.querySelectorAll(".recipe-name")
+let disp = document.querySelectorAll(".recipe-disp")
+
+<!-- console.log(name) -->
+<!-- console.log(disp) -->
+
+name.forEach((e)=>{
+e.style.color = "#874ebc";
+});
+disp.forEach((e)=>{
+e.style.color = "#874ebc";
 });
 ```
