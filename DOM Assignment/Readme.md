@@ -276,3 +276,59 @@ disp.forEach((e)=>{
 e.style.color = "#874ebc";
 });
 ```
+
+# **DOM Assignment-6**
+
+### **After Update**
+![Output Image](./06_DOM%20Project/Output/DOM%20P3%20SS-1.png)
+
+---
+
+![Output Image](./06_DOM%20Project/Output/DOM%20P3%20SS-2.png)
+
+
+### **Project Solution**
+
+```js
+<!-- logo -->
+
+let logoo = document.querySelector(".logo")
+logoo.src ="https://ineuron.ai/images/ineuron-logo.png";
+
+<!-- heading -->
+
+let heading = document.querySelector(".hero")
+console.log(heading)
+let a = heading.firstElementChild
+console.log(a)
+a.style.fontSize="85px"
+
+<!-- topimg -->
+
+let sideimg = document.querySelector(".top_img img")
+sideimg.style.marginLeft = "8%"
+sideimg.style.width = "176px"
+sideimg.style.height = "300px"
+
+<!-- change rate -->
+
+let Rs = document.querySelector(".app_price span");
+console.log(Rs)
+Rs.innerText = "$10"
+
+<!-- add linkdin icon -->
+
+let Ft = document.querySelector(".footer_social");
+<!-- console.log(Ft) -->
+let newdiv = document.createElement("div")
+newdiv.classList.add("footer_social_ico");
+<!-- console.log(newdiv) -->
+let itag = document.createElement("i")
+itag.classList.add("fa-brands fa-linkdin");
+<!-- console.log(itag) -->
+itag.innerText = "::before";
+newdiv.appendChild(itag)
+<!-- console.log(newdiv) -->
+Ft.appendChild(newdiv)
+<!-- console.log(Ft) -->
+
