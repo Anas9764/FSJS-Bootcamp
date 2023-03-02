@@ -231,10 +231,10 @@ rp.forEach((e) => {
 });
 ```
 
-
 # **DOM Assignment-5**
 
 ### **After Update**
+
 ![Output Image](./05_DOM%20Project/Output/DOM%20P2%20SS.png)
 
 ### **Project Solution**
@@ -280,12 +280,12 @@ e.style.color = "#874ebc";
 # **DOM Assignment-6**
 
 ### **After Update**
+
 ![Output Image](./06_DOM%20Project/Output/DOM%20P3%20SS-1.png)
 
 ---
 
 ![Output Image](./06_DOM%20Project/Output/DOM%20P3%20SS-2.png)
-
 
 ### **Project Solution**
 
@@ -331,4 +331,44 @@ newdiv.appendChild(itag)
 <!-- console.log(newdiv) -->
 Ft.appendChild(newdiv)
 <!-- console.log(Ft) -->
+```
 
+# **DOM Assignment-7**
+
+**Task-1**
+
+### **After Update**
+
+![Output Image](./07_DOM%20Project/ass7.1-before.png)
+
+**Task-2**
+
+### **After Update**
+
+![Output Image](./07_DOM%20Project/ass7.2-after.png)
+
+### **Project Solution**
+
+```js
+// Solution-1
+
+let lang = document.querySelector(".main__languages");
+console.log(lang);
+let links = document.querySelectorAll("a");
+console.log(links);
+links[1].remove();
+links[3].remove();
+links[5].remove();
+links[7].remove();
+links[9].remove();
+
+// Solution-2
+
+let inputs = document.querySelector(".main__form-input");
+console.log(inputs);
+inputs.disabled = false;
+
+let btn = document.querySelector(".main__form-btn");
+console.log(btn);
+btn.disabled = false;
+```
