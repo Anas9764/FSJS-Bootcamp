@@ -375,7 +375,6 @@ btn.disabled = false;
 
 # **DOM Assignment-8**
 
-
 ### **After Update**
 
 **Task-1**
@@ -423,3 +422,25 @@ btn.addEventListener("click", (event) => {
   }
 });
 ```
+
+# **DOM Assignment-9**
+
+### **After Update**
+**Task-1**
+![Output Image](./09_DOM%20Project/ass9.1-after.png)
+
+**Task-2**
+![Output Image](./09_DOM%20Project/ass9.2-after.png)
+
+### **Project Solution**
+
+```js
+// solution-1
+let h = document.querySelector(".caption .title")
+console.log(h)
+h.style.color = "red"
+
+// solution-2
+let btn = document.querySelector(".add-to-cart")
+console.log(btn)
+btn.style.backgroundColor= "red";
