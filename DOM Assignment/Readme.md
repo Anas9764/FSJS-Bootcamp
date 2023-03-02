@@ -372,3 +372,54 @@ let btn = document.querySelector(".main__form-btn");
 console.log(btn);
 btn.disabled = false;
 ```
+
+# **DOM Assignment-8**
+
+
+### **After Update**
+
+**Task-1**
+![Output Image](./08_DOM%20Project/ass8.1-after.png)
+
+**Task-2**
+![Output Image](./08_DOM%20Project/ass8.2-after.png)
+
+**Task-3**
+![Output Image](./08_DOM%20Project/ass8.3-after.png)
+
+### **Project Solution**
+
+```js
+// **solution-1**
+<!-- In aside element add new heading and some changes -->
+let content= document.querySelector("aside")
+let h1 = document.createElement("h2")
+h1.classList.add("new-head");
+h1.innerText="This is my custom heading"
+content.appendChild(h1)
+content.style.overflow ="scroll"
+content.style.border = "5px solid red"
+
+// **solution-2**
+
+<!-- add background color white -->
+
+let bg =document.querySelector(".container-fluid")
+console.log(bg)
+bg.style.backgroundColor = "white"
+
+// **solution-3**
+
+<!-- Working toggle button -->
+
+let btn = document.querySelector(".navbar-toggler")
+console.log(btn)
+btn.addEventListener("click", (event) => {
+    let btns = event.target.nextElementSibling;
+    if (btns.style.display == "block") {
+   btns.style.display = "none";
+  } else {
+    btns.style.display = "block";
+  }
+});
+```
