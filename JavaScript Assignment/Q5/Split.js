@@ -1,2 +1,2 @@
-let a = "Science Math English geography history";
-console.log(a.split(" "));
+let str = "Science Math English geography history";
+console.log(str.split(" "));
