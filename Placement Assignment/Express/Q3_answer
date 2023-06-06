@@ -1,0 +1,48 @@
+// Add Blog
+app.post('/blogs', (req, res) => {
+const { title, content } = req.body;
+const newBlog = new Blog({ title, content });
+newBlog.save((err) => {
+if (err) {
+res.status(500).json({ error: 'Error creating blog' });
+} else {
+res.status(201).json({ message: 'Blog created successfully' });
+}
+});
+});
+
+// update blog
+
+app.put('/blogs/:id', (req, res) => {
+    const blogId = req.params.id;
+    const { title, content } = req.body;
+    Blog.findByIdAndUpdate(
+      blogId,
+      { title, content },
+      { new: true },
+      (err, updatedBlog) => {
+        if (err) {
+          res.status(500).json({ error: 'Error updating blog' });
+        } else if (!updatedBlog) {
+          res.status(404).json({ error: 'Blog not found' });
+        } else {
+          res.status(200).json(updatedBlog);
+        }
+      }
+    );
+  });
+
+//   Delete blog
+  app.delete('/blogs/:id', (req, res) => {
+    const blogId = req.params.id;
+    Blog.findByIdAndRemove(blogId, (err, deletedBlog) => {
+      if (err) {
+        res.status(500).json({ error: 'Error deleting blog' });
+      } else if (!deletedBlog) {
+        res.status(404).json({ error: 'Blog not found' });
+      } else {
+        res.status(200).json({ message: 'Blog deleted successfully' });
+      }
+    });
+  });
+  

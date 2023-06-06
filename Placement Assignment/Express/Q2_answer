@@ -1,0 +1,23 @@
+const isAuthenticated = (req, res, next) => {
+  const isLoggedIn = true; 
+
+  if (isLoggedIn) {
+   
+    next();
+  } else {
+ 
+    res.status(401).json({ message: 'Unauthorized' });
+  }
+};
+
+
+app.get('/post', authMiddleware, (req, res) => {
+   
+    const posts = [
+      { id: 1, title: 'Post 1' },
+      { id: 2, title: 'Post 2' },
+      { id: 20, title: 'Post 20' }
+    ];
+    res.json(posts);
+  });
+  
